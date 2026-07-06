@@ -1,0 +1,823 @@
+/* Importar fuentes elegantes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400&display=swap');
+
+/* Tipografías */
+
+.font-cormorant{
+    font-family:'Cormorant Garamond', serif;
+}
+
+.font-playfair{
+    font-family:'Playfair Display', serif;
+}
+
+.font-brittany{
+    font-family:'Brittany Signature', cursive;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    max-width: 500px;
+    height: 100dvh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: "Forum", serif;
+    z-index: 9999;
+    /* Fondo */
+    background: #f4f3f0 url("assets/bg-sello-home.png")
+    center top / cover no-repeat;
+}
+
+.overlay-open{
+    margin-top:350px;
+    font-size:2rem;
+    color:#A37B31;
+    letter-spacing:1px;
+    cursor:pointer;
+    user-select:none;
+    transition:.35s ease;
+    text-align:center;
+    animation: pulseOpen 2.5s ease-in-out infinite;
+}
+
+.overlay-open:hover{
+    color:#5f6752;
+    transform:translateY(-2px);
+}
+
+.overlay-open:hover{
+    color: #495144;
+    border-color: rgba(124,131,107,.35);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+
+@keyframes pulseOpen{
+    0%,100%{
+        opacity:.1;
+        transform:scale(1);
+    }
+    50%{
+        opacity:1.2;
+        transform:scale(1.1);
+    }
+}       
+
+.overlay-content {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.overlay-subtitle {
+    font-size: 1.3rem;
+    color: #454a42;
+    letter-spacing: 1px;
+}
+
+.overlay-subtitle-2 {
+    font-size: 1.8rem;
+    color: #454a42;
+    letter-spacing: 1px;
+}
+
+.invitation-name{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invitation-name img{
+    width: 100%;
+    max-width: 600px; /* Cambia este valor según el tamaño máximo deseado */
+    height: auto;
+    display: block;
+}
+
+/* Contenedor principal de los nombres */
+.overlay-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.3rem;
+    line-height:1.05;
+    font-weight: 100;
+    color: #8e7226; /* Verde oscuro grisáceo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Brittany Signature', cursive;
+    margin: 60px 0px;
+}
+
+/* Línea divisoria delgada */
+.divider {
+    border: none;
+    border-top: 1px solid #c0c7be;
+    width: 60%;
+    margin: 10px auto;
+}
+
+.overlay-badge {
+    font-size: 2.4rem;
+    color: #7a7a7a;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.music-notice {
+    font-family: "Forum", serif;
+    font-size: 1rem;
+    width: 100%;
+    color: #777777;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    margin: 30px 0px;
+}
+
+/* Contenedor de botones en fila */
+.overlay-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Botones idénticos verde oliva mate */
+.btn-invite {
+    background-color: #9aa394; /* Color exacto verde claro mate */
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-invite:hover {
+    background-color: #848e7e; /* Un tono un poco más oscuro al pasar el cursor */
+}
+
+/* --- ILUSTRACIONES BOTÁNICAS (SUPERIOR E INFERIOR) --- */
+.botanical-top, 
+.botanical-bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 180px; /* Altura ideal para lucir el SVG sin invadir el texto */
+    background-image: url('assets/flowers.svg');
+    background-repeat: no-repeat;
+    background-size: contain; /* Mantiene la proporción perfecta del dibujo */
+    pointer-events: none; /* Los clics pasan a través del SVG si llega a pisar un botón */
+    z-index: 1;
+}
+
+.botanical-top {
+    top: 0;
+    background-position: top center;
+}
+
+.botanical-bottom {
+    bottom: 0;
+    background-position: top center;
+    transform: rotate(180deg); /* Invierte el SVG para que nazca desde el borde inferior */
+}
+
+/* Clase reutilizable */
+.botanical {
+    width: 100%;
+    height: 100px;
+    background-image: url('assets/flowers.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    pointer-events: none;
+}
+
+.botanical-bot {
+    width: 100%;
+    height: 100px;
+    background-image: url('assets/flowers.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    pointer-events: none;
+    transform: rotate(180deg); /* Invierte el SVG para que nazca desde el borde inferior */
+}
+
+/* Clase reutilizable */
+.border-info {
+    width: 100%;
+    height: 100px;
+    background-image: url('assets/border-info.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    pointer-events: none;
+}
+
+.border-bottom {
+    width: 100%;
+    height: 100px;
+    background-image: url('assets/border-info.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    pointer-events: none;
+    transform: rotate(180deg); /* Invierte el SVG para que nazca desde el borde inferior */
+}
+
+/* El contenido central debe estar por encima de las flores si se llegan a cruzar */
+.overlay-content {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Oculta por completo la invitación al cargar la página */
+.hidden {
+    display: none !important;
+}
+
+/* Transición de desvanecimiento para el Overlay */
+.overlay {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Clase que añade JavaScript al hacer clic */
+.overlay.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Estilos base para tu contenido interno */
+.main-content {
+    min-height: 100vh;
+    margin: auto auto;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+    color: #4a554a;
+
+    /* Cambios para centrar todo el contenido interno */
+    display: flex;
+    flex-direction: column;   /* Alinea los elementos uno abajo del otro */
+    justify-content: center;  /* Centrado vertical */
+    align-items: center;      /* Centrado horizontal */
+    text-align: center;       /* Asegura que los textos internos también se centren */
+    
+}
+
+/* Animación suave de aparición para el contenido interno */
+.fade-in {
+    animation: fadeInAnimation 0.8s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(10px); /* Sube ligeramente al aparecer */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.countdown-title{
+    font-family:'Cormorant Garamond', serif;
+    font-size:2.5rem;
+    font-weight:400;
+    color:#5e6f66;
+}
+
+.countdown-grid{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:0;
+}
+
+.time-box{
+    min-width:85px;
+    text-align:center;
+}
+
+.time-box span{
+    display:block;
+    font-family:'Cormorant Garamond', serif;
+    font-size:3rem;
+    font-weight:300;
+    color:#9c845f;
+    line-height:1;
+}
+
+.time-box small{
+    display:block;
+    margin-top:6px;
+    font-family:'Montserrat', sans-serif;
+    font-size:.85rem;
+    letter-spacing:1px;
+    color:#5e6f66;
+    text-transform:lowercase;
+}
+
+.separator{
+    width:1px;
+    height:65px;
+    background:#a4ab9a;
+    opacity:.7;
+}
+
+.heart{
+    margin-top:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.heart svg{
+    width:4rem;
+    height:4rem;
+    fill:#7c836b;
+    transform-origin:center;
+    animation:pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+    }
+    8%{
+        transform:scale(1.12);
+    }
+    16%{
+        transform:scale(.98);
+    }
+    24%{
+        transform:scale(1.08);
+    }
+    32%{
+        transform:scale(1);
+    }
+}
+
+/* Estilos rápidos de ejemplo para la tarjeta interna */
+.invitation-body {
+    max-width: 500px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+.invitation-body h2 { font-size: 32px; font-weight: 400; margin-bottom: 10px; }
+.invitation-body .date { font-family: 'Montserrat', sans-serif; font-size: 14px; letter-spacing: 2px; color: #7d8c77; margin-bottom: 20px; }
+
+.invitation-body {
+        text-align: center; /* Centra todo el contenido */
+    }
+
+.invitation-card-container {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efecto de sombra */
+    overflow: hidden; /* Asegura que la imagen siga los bordes redondeados */
+}
+
+.invitation-image {
+    width: 100%; /* La imagen se ajusta al contenedor */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Elimina espacios en blanco extraños */
+}
+
+/* Contenedor principal de la sección */
+.event-details-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    max-width: 500px;
+    margin: 10px 20px
+}
+
+/* Tarjetas individuales */
+.info-card,
+.info-card-1{
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    color: #4a554a;
+    margin: 24px 0;
+    padding: 40px 22px;
+    border: 1px solid rgba(124,131,107,.12);
+
+    /* Efecto hoja flotante */
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.06),
+        0 20px 40px rgba(0,0,0,.10),
+        0 35px 70px rgba(0,0,0,.10),
+        0 60px 100px rgba(0,0,0,.05);
+
+    transition: all .35s ease;
+}
+
+/* Solo si deseas que la segunda conserve alguna diferencia */
+.info-card-1 {
+    background-image: url('assets/bg-white.jpeg');
+    background-size: cover;
+}
+
+
+.info-card {
+    background-image: url('assets/bg-green.jpeg');
+    background-size: cover;
+}
+
+.info-card-sheet{
+    padding: 20px 40px;
+}
+
+.card-oval{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    min-height: 600px;
+    margin: 0 auto;
+
+    /* Fondo */
+    background-color: #ffffff92;
+
+    /* Forma */
+    border-radius: 400px;
+
+    /* Borde exterior */
+    border: 2px solid #f7f2eb;
+
+    /* Sombra */
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.08),
+        inset 0 2px 8px rgba(255,255,255,.8);
+
+    overflow: hidden;
+}
+
+.card-oval-1{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    min-height: 600px;
+    margin: 0 auto;
+
+    /* Fondo */
+    background-color: rgba(247, 242, 235, 0.5);
+
+    /* Forma */
+    border-radius: 400px;
+
+    /* Borde exterior */
+    border: 2px solid #f7f2eb;
+
+    /* Sombra */
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.08),
+        inset 0 2px 8px rgba(255,255,255,.8);
+
+    overflow: hidden;
+}
+
+
+.card-oval-1::before{
+    content:"";
+    position:absolute;
+    inset:18px;
+
+    border:2px solid #d9cdbd;
+    border-radius:400px;
+
+    pointer-events:none;
+}
+.card-oval-1{
+    width:min(92vw,400px);
+    aspect-ratio: 0.68;
+    border-radius:400px;
+}
+
+.card-oval-1::before{
+    border-radius:400px;
+}
+
+.center-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px 30px;
+    height: 100%;
+}
+
+.card-oval::before{
+    content:"";
+    position:absolute;
+    inset:18px;
+
+    border:2px solid #d9cdbd;
+    border-radius:400px;
+
+    pointer-events:none;
+}
+.card-oval{
+    width:min(92vw,400px);
+    aspect-ratio: 0.68;
+    border-radius:400px;
+}
+
+.card-oval::before{
+    border-radius:400px;
+}
+
+/* Iconos superiores */
+.card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.church img{
+    width: 100%;
+    max-width: 180px; /* Cambia este valor según el tamaño máximo deseado */
+    height: auto;
+    display: block;
+}
+
+.money_maker img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.just-married img{
+    width: 100%;
+    max-width: 320px; /* Cambia este valor según el tamaño máximo deseado */
+    height: auto;
+    display: block;
+}
+
+.dress-code img{
+    width: 100%;
+    max-width: 90px; /* Cambia este valor según el tamaño máximo deseado */
+    height: auto;
+    display: block;
+}
+
+.dinner img{
+    width: 100%;
+    max-width: 130px; /* Cambia este valor según el tamaño máximo deseado */
+    height: auto;
+    display: block;
+}
+
+/* Anillos hechos con CSS sutil */
+.rings-icon {
+    display: flex;
+    position: relative;
+}
+.rings-icon span {
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid #7c836b;
+    border-radius: 50%;
+    display: inline-block;
+}
+.rings-icon span:last-child {
+    margin-left: -10px;
+}
+
+/* Títulos principales */
+.card-title {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+}
+
+/* Divisor decorativo (puedes reemplazar con un mini SVG de hojas si prefieres) */
+.divider-leaves {
+    width: 100px;
+    height: 15px;
+    margin: 0 auto 25px auto;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 15" fill="none" stroke="%237c836b" stroke-width="1"><path d="M10,7 Q30,12 50,7 T90,7 M35,7 Q42,2 50,7 M50,7 Q58,12 65,7"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Bloques de información (Día y Lugar) */
+.card-block {
+    margin-bottom: 30px;
+}
+.card-block:last-child {
+    margin-bottom: 0;
+}
+
+.card-block h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 8px 0;
+    letter-spacing: 1px;
+}
+
+.card-block p {
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+    color: #6b756b;
+}
+
+/* Botones de acción */
+.btn-action {
+    display: inline-block;
+    background-color: #7c836b; /* El verde fill:#7c836b de la identidad */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 35px;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 1px solid #7c836b;
+}
+
+.btn-action:hover {
+    background-color: #676d58;
+    border-color: #676d58;
+}
+
+/* Botón transparente para "¿Cómo llegar?" */
+.btn-outline {
+    background-color: transparent;
+    color: #7c836b;
+}
+
+.btn-outline:hover {
+    background-color: #7c836b;
+    color: #ffffff;
+}
+
+/* Ajustes responsivos para celulares */
+@media (max-width: 768px) {
+    .info-card {
+        max-width: 100%;
+    }
+}
+
+.address {
+    color: #6b756b;
+}
+
+    @keyframes galleryScroll{
+        from{transform:translateX(0);}
+        to{transform:translateX(-50%);}
+    }
+
+    .gallery-track{
+        display:flex;
+        width:max-content;
+        animation:galleryScroll 25s linear infinite;
+    }
+
+    .gallery-track:hover{
+        animation-play-state:paused;
+    }
+
+    .gallery-card{
+        flex:none;
+        width:180px;
+        margin:0 10px;
+        background:#fff;
+        padding:8px 8px 22px;
+        box-sizing:border-box;
+        box-shadow:0 8px 18px rgba(0,0,0,.06);
+        transition:.45s;
+        transform:rotate(-2deg);
+    }
+
+    .gallery-card:nth-child(even){
+        transform:rotate(2deg);
+    }
+
+    .gallery-card:hover{
+        transform:translateY(-8px) scale(1.04) rotate(0deg);
+        box-shadow:0 15px 35px rgba(0,0,0,.12);
+    }
+
+    .gallery-card img{
+        width:100%;
+        aspect-ratio:1/1.2;
+        object-fit:cover;
+        display:block;
+    }
+
+    .flowers-bg,
+    .flowers-bg-bottom{
+        position: absolute;
+        left: 50%;
+        width: 100%;
+        max-width: 420px;
+        height: 180px;
+
+        background: url("assets/flowers.svg") no-repeat center;
+        background-size: contain;
+
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    /* Superior */
+    .flowers-bg{
+        top: 0;
+        transform: translateX(-50%);
+    }
+
+    /* Inferior */
+    .flowers-bg-bottom{
+        bottom: 0;
+        top: auto;
+        transform: translateX(-50%) rotate(180deg);
+    }
+
+    .countdown-content{
+        position:relative;
+        z-index:2;
+    }
+
+    .church{
+        fill:none;
+        stroke:#7c836b;
+        stroke-width:2.5;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+
+        stroke-dasharray:600;
+        stroke-dashoffset:600;
+
+        animation:draw 3s ease forwards;
+    }
+
+    .church-group{
+        transform-origin:center;
+        animation:float 3s ease-in-out infinite 3s;
+    }
+
+    .photo-carousel{
+    width:100%;
+    max-width:360px;
+    margin:35px auto 0;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0, 0, 0, 0.385);
+    }
+
+    .carousel-track{
+        display:flex;
+        transition:transform .8s ease-in-out;
+    }
+
+    .carousel-track img{
+        width:100%;
+        flex-shrink:0;
+        aspect-ratio:4/5;
+        object-fit:cover;
+        display:block;
+    }
+
+    @keyframes draw{
+        to{
+            stroke-dashoffset:0;
+        }
+    }
+
+    @keyframes float{
+        0%,100%{
+            transform:translateY(0);
+        }
+        50%{
+            transform:translateY(-6px) scale(1.02);
+        }
+    }

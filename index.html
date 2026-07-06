@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayra & Jhorman | Nuestra Boda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/brittany-signature" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="welcome-overlay" class="overlay"> 
+        <div class="overlay-content">
+            <div class="overlay-buttons">
+
+                <div class="overlay-open" onclick="ingresarALaInvitacion()">
+                    Toca aquí
+                </div>   
+            </div>
+        </div>        
+    </div>
+
+    <main id="main-content" class="main-content hidden">
+        
+
+        <section class="event-details-section">
+
+            <div class="info-card" style="padding: 80px 20px;">
+                <div class="info-card-sheet">
+                    <p class="overlay-subtitle font-cormorant">Tenemos el honor de invitarte a la boda de</p> 
+                    <div class="invitation-name">
+                        <img src="assets/name-invitation.png" alt="Mayra Rivera & Jhorman Landazabal">
+                    </div>   
+                    <hr class="divider">
+                    <p class="overlay-subtitle-2 font-playfair">26/09/2026</p>
+                    <p class="overlay-subtitle font-cormorant" >"UNO solo puede ser vencido, pero DOS pueden resistir, ¡La cuerda de tres hilos no se rompe facilmente!"</p>
+                    <p class="overlay-subtitle font-cormorant" style="font-size: 1rem;">"Eclesiastés 4:12"</p>
+                </div>    
+            </div>
+
+            <div class="info-card-1">
+                <div class="card-oval">
+                    <div class="center-content">
+                    <div class="church">
+                        <img src="assets/chruch.png" alt="chruch">    
+                    </div>
+                    
+                    <h2 class="card-title" style="font-family:'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; margin: 0 0 10px 0; letter-spacing: 1px; color: #424942;">CEREMONIA RELIGIOSA</h2>
+                    <div class="divider-leaves" style="width: 120px; height: 16px; margin: 0 auto 25px auto; background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 100 20&quot; fill=&quot;none&quot; stroke=&quot;%237c836b&quot; stroke-width=&quot;1.2&quot; stroke-linecap=&quot;round&quot;><path d=&quot;M5,10 Q25,14 50,10 T95,10&quot;/><path d=&quot;M38,10 Q44,4 50,10 Q44,16 38,10 Z&quot; fill=&quot;%237c836b&quot; fill-opacity=&quot;0.15&quot;/><path d=&quot;M50,10 Q56,4 62,10 Q56,16 52,10 Z&quot; fill=&quot;%237c836b&quot; fill-opacity=&quot;0.15&quot;/></svg>'); background-repeat: no-repeat; background-position: center; background-size: contain;"></div>
+                    
+                    <div class="card-block" style="margin-bottom: 15px;">
+                        <p style="font-family:'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; margin: 0; color: #6b756b;">4:00 pm | Capellania De La Transfiguración Del Señor</p>
+                    </div>
+                    
+                    <div class="card-block" style="margin-bottom: 5px;">
+                        <p class="address" style="font-style: italic; font-size: 1.2rem; font-weight: 400; margin: 0 0 20px 0; color: #6b756b; line-height: 1.3;">Loma Mesa de Ruitoque, Floridablanca, Santander</p>
+                        
+                        <div class="maps-container" style="display: flex; flex-direction: row; justify-content: center; gap: 15px; margin: 0 auto;">
+                            
+                            <a href="https://www.google.com/maps/search/?api=1&query=Capellania+De+La+Transfiguracion+Del+Señor+Ruitoque" target="_blank" rel="noopener noreferrer" title="Google Maps" style="display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; background-color: transparent; color: #7c836b; text-decoration: none; border-radius: 50%; border: 1px solid #7c836b; box-sizing: border-box;">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </a>
+                            
+                            <a href="https://waze.com/ul?q=Capellania%20De%20La%20Transfiguracion%20Del%20Señor%20Ruitoque&navigate=yes" target="_blank" rel="noopener noreferrer" title="Waze" style="display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; background-color: transparent; color: #7c836b; text-decoration: none; border-radius: 50%; border: 1px solid #7c836b; box-sizing: border-box;">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2a10 10 0 0 1 10 10c0 2.5-1 4.5-2.5 6a3 3 0 0 1-4.5 0c-1.5 1-3.5 1.5-5 1.5A10 10 0 0 1 2 12C2 6.5 6.5 2 12 2Z"></path>
+                                    <circle cx="8" cy="12" r="1"></circle>
+                                    <circle cx="16" cy="12" r="1"></circle>
+                                    <path d="M9 16c1 1 2.5 1.5 3 1.5s2-.5 3-1.5"></path>
+                                </svg>
+                            </a>
+                            
+                            <a href="https://maps.apple.com/?q=Capellania+De+La+Transfiguracion+Del+Señor+Ruitoque&ll=7.0275,-73.1341" target="_blank" rel="noopener noreferrer" title="Apple Maps" style="display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; background-color: transparent; color: #7c836b; text-decoration: none; border-radius: 50%; border: 1px solid #7c836b; box-sizing: border-box;">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                                </svg>
+                            </a>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <div class="card-oval-1">
+                    <div class="center-content">
+                        <div class="dinner">
+                            <img src="assets/dinner.png" alt="dinner">    
+                        </div>
+                        
+                        <h2 class="card-title" style="font-family:'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; margin: 0 0 10px 0; letter-spacing: 1px; color: #424942;">RECEPCIÓN</h2>
+                        <div class="divider-leaves" style="width: 120px; height: 16px; margin: 0 auto 25px auto; background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 100 20&quot; fill=&quot;none&quot; stroke=&quot;%237c836b&quot; stroke-width=&quot;1.2&quot; stroke-linecap=&quot;round&quot;><path d=&quot;M5,10 Q25,14 50,10 T95,10&quot;/><path d=&quot;M38,10 Q44,4 50,10 Q44,16 38,10 Z&quot; fill=&quot;%237c836b&quot; fill-opacity=&quot;0.15&quot;/><path d=&quot;M50,10 Q56,4 62,10 Q56,16 52,10 Z&quot; fill=&quot;%237c836b&quot; fill-opacity=&quot;0.15&quot;/></svg>'); background-repeat: no-repeat; background-position: center; background-size: contain;"></div>
+                        
+                        
+                        <div class="card-block" style="margin-bottom: 15px;">
+                            <p style="font-family:'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; margin: 0; color: #6b756b;">5:00 pm | Hotel Punta Diamante</p>
+                        </div>
+                        
+                        <div class="card-block" style="margin-bottom: 5px;">
+                            <p class="address" style="font-family:'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; margin: 0 0 4px 0; line-height: 1.3;"> Quantum Terrace - Sky Bar</p>
+                            <p class="address" style="font-style: italic; font-size: 1.2rem; font-weight: 400; margin: 0 0 20px 0; color: #6b756b; line-height: 1.3;">Ruitoque Condominio, Floridablanca, Santander</p>
+                            
+                            <div class="maps-container" style="display: flex; flex-direction: row; justify-content: center; gap: 15px; margin: 0 auto;">
+                                
+                                <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Punta+Diamante+Floridablanca+Santander" target="_blank" rel="noopener noreferrer" title="Google Maps" style="display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; background-color: #7c836b; color: #ffffff; text-decoration: none; border-radius: 50%; border: 1px solid #7c836b; box-sizing: border-box;">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </a>
+                                
+                                <a href="https://waze.com/ul?q=Hotel%20Punta%20Diamante%20Floridablanca&navigate=yes" target="_blank" rel="noopener noreferrer" title="Waze" style="display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; background-color: #7c836b; color: #ffffff; text-decoration: none; border-radius: 50%; border: 1px solid #7c836b; box-sizing: border-box;">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2a10 10 0 0 1 10 10c0 2.5-1 4.5-2.5 6a3 3 0 0 1-4.5 0c-1.5 1-3.5 1.5-5 1.5A10 10 0 0 1 2 12C2 6.5 6.5 2 12 2Z"></path>
+                                        <circle cx="8" cy="12" r="1"></circle>
+                                        <circle cx="16" cy="12" r="1"></circle>
+                                        <path d="M9 16c1 1 2.5 1.5 3 1.5s2-.5 3-1.5"></path>
+                                    </svg>
+                                </a>
+                                
+                                <a href="https://maps.apple.com/?q=Hotel+Punta+Diamante+Floridablanca&ll=7.0315,-73.1368" target="_blank" rel="noopener noreferrer" title="Apple Maps" style="display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; background-color: #7c836b; color: #ffffff; text-decoration: none; border-radius: 50%; border: 1px solid #7c836b; box-sizing: border-box;">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                                    </svg>
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card-1">
+                <div class="card-oval">
+                    <div class="center-content">
+
+                        <div class="just-married">
+                            <img src="assets/just_married.png" alt="just-married">    
+                        </div>
+
+                        <div style="display:flex; align-items:center; gap:20px;">
+
+                            <!-- Imagen -->
+                            <div style="flex:0 0 42%;">
+                                <img src="assets/dress_code.png"
+                                    alt="Dress Code"
+                                    style="width:100%; max-width:140px; display:block; margin:auto;">
+                            </div>
+
+                            <!-- Información -->
+                            <div style="flex:1; text-align:left;">
+
+                                <h2 style="
+                                    margin:0;
+                                    font-family:'Cormorant Garamond', serif;
+                                    font-size:1.45rem;
+                                    font-weight:500;
+                                    color:#424942;
+                                    line-height:1.15;">
+                                    CÓDIGO DE<br>VESTIMENTA
+                                </h2>
+
+                                <p style="
+                                    margin:10px 0 18px;
+                                    font-family:'Cormorant Garamond', serif;
+                                    font-size:1.2rem;
+                                    color:#7c836b;
+                                    letter-spacing:1px;">
+                                    SEMI FORMAL
+                                </p>
+
+                                <a href="https://pin.it/7hRJZTgXW"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style="
+                                        display:inline-block;
+                                        padding:8px 18px;
+                                        border:1px solid #7c836b;
+                                        text-decoration:none;
+                                        color:#424942;
+                                        background:#fff;
+                                        font-family:'Cormorant Garamond', serif;
+                                        font-size:1rem;
+                                        transition:.3s;">
+                                    Ver inspiración
+                                </a>
+                            </div>
+                        </div>
+                            <p style="font-style: italic; font-size: 1rem; font-weight: 400; color: #6b756b; line-height: 1.3;">Nos Reservamos el color BLANCO</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="card-oval-1">
+                    <div class="center-content">
+
+                        <h2 class="card-title" style="font-family:'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; margin: 0 0 10px 0; letter-spacing: 1px; color: #424942;">REGALOS</h2>
+                        <div class="divider-leaves" style="width: 120px; height: 16px; margin: 0 auto 25px auto; background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 100 20&quot; fill=&quot;none&quot; stroke=&quot;%237c836b&quot; stroke-width=&quot;1.2&quot; stroke-linecap=&quot;round&quot;><path d=&quot;M5,10 Q25,14 50,10 T95,10&quot;/><path d=&quot;M38,10 Q44,4 50,10 Q44,16 38,10 Z&quot; fill=&quot;%237c836b&quot; fill-opacity=&quot;0.15&quot;/><path d=&quot;M50,10 Q56,4 62,10 Q56,16 52,10 Z&quot; fill=&quot;%237c836b&quot; fill-opacity=&quot;0.15&quot;/></svg>'); background-repeat: no-repeat; background-position: center; background-size: contain;"></div>
+                        
+                        <div class="card-block" style="margin-bottom: 15px;">
+                            <p style="font-family:'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; margin: 0; color: #6b756b;">Tú compañía es lo más importante, si deseas hacernos un obsequio lo recibimos con mucho cariño.</p>
+                        </div>
+                        
+                        <div class="money_maker">
+                            <img src="assets/money_maker.png" alt="money_maker">    
+                        </div>
+
+                        <div class="card-block" style="margin-bottom: 5px;">
+                            <p class="address" style="font-family:'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; margin: 0 0 4px 0; line-height: 1.3;">Lluvia de Sobres</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card-1">
+                <div class="center-content">
+                    <!-- Flores -->
+                    <h2 class="card-title" style="font-family:'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; margin: 0 0 10px 0; letter-spacing: 1px; color: #424942;">Falta Para Nuestro Día</h2>
+                    <div class="countdown-grid">
+                        <div class="time-box">
+                            <span id="days">0</span>
+                            <small>días</small>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="time-box">
+                            <span id="hours">0</span>
+                            <small>hs</small>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="time-box">
+                            <span id="minutes">0</span>
+                            <small>min</small>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="time-box">
+                            <span id="seconds">0</span>
+                            <small>seg</small>
+                        </div>
+                    </div>
+                    <div class="heart">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                                    2 5.42 4.42 3 7.5 3
+                                    c1.74 0 3.41.81 4.5 2.09
+                                    C13.09 3.81 14.76 3 16.5 3
+                                    19.58 3 22 5.42 22 8.5
+                                    c0 3.78-3.4 6.86-8.55 11.54
+                                    L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <div class="photo-carousel">
+                        <div class="carousel-track">
+                            <img src="assets/foto1.png" alt="">
+                            <img src="assets/foto2.png" alt="">
+                            <img src="assets/foto3.png" alt="">
+                        </div>
+                    </div>                
+
+                    <h2 class="card-title" style="font-family:'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; margin: 30px 0 10px 0; letter-spacing: 1px; color: #424942;">CONFIRMAR ASISTENCIA</h2>
+                    <div class="divider-leaves" style="width: 120px; height: 16px; margin: 0 auto 25px auto; background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 100 20&quot; fill=&quot;none&quot; stroke=&quot;%237c836b&quot; stroke-width=&quot;1.2&quot; stroke-linecap=&quot;round&quot;><path d=&quot;M5,10 Q25,14 50,10 T95,10&quot;/><path d=&quot;M38,10 Q44,4 50,10 Q44,16 38,10 Z&quot; fill=&quot;%237c836b&quot; fill-opacity=&quot;0.15&quot;/><path d=&quot;M50,10 Q56,4 62,10 Q56,16 52,10 Z&quot; fill=&quot;%237c836b&quot; fill-opacity=&quot;0.15&quot;/></svg>'); background-repeat: no-repeat; background-position: center; background-size: contain;"></div>
+                    <a href="https://wa.me/573012236152?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Jhorman%20y%20Mayra."
+                    target="_blank"
+                    style="
+                            display:inline-flex;
+                            align-items:center;
+                            justify-content:center;
+                            gap:10px;
+                            padding:14px 34px;
+                            border-radius:50px;
+                            background:#7c836b;
+                            color:#fff;
+                            text-decoration:none;
+                            font-family:'Montserrat', sans-serif;
+                            font-size:.95rem;
+                            font-weight:600;
+                            letter-spacing:1px;
+                            text-transform:uppercase;
+                            box-shadow:0 10px 25px rgba(124,131,107,.25);
+                            transition:.3s ease;
+                    "
+                    onmouseover="this.style.background='#69715d';this.style.transform='translateY(-2px)'"
+                    onmouseout="this.style.background='#7c836b';this.style.transform='translateY(0)'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.52 3.48A11.82 11.82 0 0 0 12.05 0C5.5 0 .17 5.33.17 11.88c0 2.09.55 4.14 1.6 5.95L0 24l6.34-1.66a11.8 11.8 0 0 0 5.71 1.46h.01c6.55 0 11.88-5.33 11.88-11.88a11.8 11.8 0 0 0-3.42-8.44ZM12.05 21.8a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.76.99 1-3.67-.24-.38a9.82 9.82 0 1 1 8.41 4.66Zm5.42-7.38c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.46-.88-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.08-.8.37-.27.3-1.05 1.02-1.05 2.48s1.08 2.88 1.23 3.08c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+                    </svg>
+
+                    Confirmar por WhatsApp
+                    </a>
+                </div>
+                </div>
+            </div>
+
+        </section>
+        
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const overlay = document.getElementById("welcome-overlay");
+            const mainContent = document.getElementById("main-content");
+            const btnWithMusic = document.getElementById("btn-with-music");
+            const btnNoMusic = document.getElementById("btn-no-music");
+
+            const music = new Audio("assets/desde_que_te_tengo.mp3");
+            music.loop = true;
+            music.volume = 0.1;
+            music.preload = "auto";
+
+            // Función global
+            window.ingresarALaInvitacion = function () {
+
+                overlay.classList.add("fade-out");
+
+                mainContent.classList.remove("hidden");
+                mainContent.classList.add("fade-in");
+
+                setTimeout(() => {
+                    overlay.style.display = "none";
+                }, 500);
+
+                music.play().catch(error => {
+                    console.log("La reproducción automática fue bloqueada:", error);
+                });
+            };
+
+            const track = document.querySelector(".carousel-track");
+            const slides = document.querySelectorAll(".carousel-track img");
+            let index = 0;
+            function moveCarousel() {
+                index++;
+                if (index >= slides.length) {
+                    index = 0;
+                }
+                track.style.transform = `translateX(-${index * 100}%)`;            }
+
+            setInterval(moveCarousel, 3500); // Cambia cada 3.5 segundos
+
+            // Ingresar con música
+            btnWithMusic.addEventListener("click", () => {
+
+                music.play().catch(error => {
+                    console.log("La reproducción automática fue bloqueada:", error);
+                });
+
+                ingresarALaInvitacion();
+
+            });
+
+            // Ingresar sin música
+            btnNoMusic.addEventListener("click", () => {
+                ingresarALaInvitacion();
+            });
+
+        });
+        const weddingDate = new Date("2026-09-26T16:00:00");
+
+        function updateCountdown() {
+            const now = new Date();
+            const difference = weddingDate - now;
+            if (difference <= 0) {
+                return;
+            }
+            const days = Math.floor(
+                difference / (1000 * 60 * 60 * 24)
+            );
+            const hours = Math.floor(
+                (difference % (1000 * 60 * 60 * 24))
+                /
+                (1000 * 60 * 60)
+            );
+            const minutes = Math.floor(
+                (difference % (1000 * 60 * 60))
+                /
+                (1000 * 60)
+            );
+            const seconds = Math.floor(
+                (difference % (1000 * 60))
+                /
+                1000
+            );
+            document.getElementById("days").textContent =
+                days.toString().padStart(2, "0");
+
+            document.getElementById("hours").textContent =
+                hours.toString().padStart(2, "0");
+
+            document.getElementById("minutes").textContent =
+                minutes.toString().padStart(2, "0");
+
+            document.getElementById("seconds").textContent =
+                seconds.toString().padStart(2, "0");
+        }
+
+        updateCountdown();
+
+        setInterval(updateCountdown, 1000);
+    </script>
+
+</body>
+</html>
