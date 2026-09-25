@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayra & Jhorman | Nuestra Boda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/brittany-signature" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="welcome-overlay" class="overlay"> 
+        <div class="overlay-content">
+            <div class="overlay-buttons">
+
+                <div class="overlay-open" onclick="ingresarALaInvitacion()">
+                    Toca aquí
+                </div>   
+            </div>
+        </div>        
+    </div>
+
+    <main id="main-content" class="main-content hidden">
+        
+
+        <section class="event-details-section">
+
+            <div class="info-card" style="padding: 80px 20px;">
+                <div class="info-card-sheet">
+                    <p class="overlay-subtitle font-cormorant">Tenemos el honor de invitarte a la boda de</p> 
+                    <div class="invitation-name">
+                        <img src="assets/name-invitation.png" alt="Mayra Rivera & Jhorman Landazabal">
+                    </div>   
+                    <hr class="divider">
+                    <p class="overlay-subtitle-2 font-playfair" id="wedding-date"></p>
+                    <script>
+                    const fechaColombia = new Date("2026-09-26T16:00:00-05:00");
+
+                    const partes = new Intl.DateTimeFormat("en-GB", {
+                        timeZoneName: "short",
+                        day: "2-digit",
+                        month: "2-digit",
+                        year: "numeric",
+                        hour: "2-digit",
+                        minute: "2-digit",
+                        hour12: true
+                    }).formatToParts(fechaColombia);
+
+                    const get = tipo => partes.find(p => p.type === tipo)?.value;
+
+                    document.getElementById("wedding-date").textContent =
+                        `${get("day")}/${get("month")}/${get("year")} ${get("hour")}:${get("minute")}${get("dayPeriod")}`;
+                    </script>
+                    <p class="overlay-subtitle font-cormorant" >"UNO solo puede ser vencido, pero DOS pueden resistir, ¡La cuerda de tres hilos no se rompe facilmente!"</p>
+                    <p class="overlay-subtitle font-cormorant" style="font-size: 1rem;">"Eclesiastés 4:12"</p>
+                </div>    
+            </div>
+
+            <div class="info-card-1">
+                <div class="center-content">
+                    <!-- Flores -->
+                    <h2 class="card-title" style="font-family:'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; margin: 0 0 10px 0; letter-spacing: 1px; color: #424942;">Falta Para Nuestro Día</h2>
+                    <div class="countdown-grid">
+                        <div class="time-box">
+                            <span id="days">0</span>
+                            <small>días</small>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="time-box">
+                            <span id="hours">0</span>
+                            <small>hs</small>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="time-box">
+                            <span id="minutes">0</span>
+                            <small>min</small>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="time-box">
+                            <span id="seconds">0</span>
+                            <small>seg</small>
+                        </div>
+                    </div>
+                    <div class="heart">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                                    2 5.42 4.42 3 7.5 3
+                                    c1.74 0 3.41.81 4.5 2.09
+                                    C13.09 3.81 14.76 3 16.5 3
+                                    19.58 3 22 5.42 22 8.5
+                                    c0 3.78-3.4 6.86-8.55 11.54
+                                    L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <div class="photo-carousel">
+                        <div class="carousel-track">
+                            <img src="assets/foto1.png" alt="">
+                            <img src="assets/foto2.png" alt="">
+                            <img src="assets/foto3.png" alt="">
+                        </div>
+                    </div>                
+
+                    <h2 class="card-title" style="font-family:'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; margin: 30px 0 10px 0; letter-spacing: 1px; color: #424942;">ÚNETE A NUESTRA CELEBRACIÓN A DISTANCIA</h2>
+                    <div class="divider-leaves" style="width: 120px; height: 16px; margin: 0 auto 25px auto; background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 100 20&quot; fill=&quot;none&quot; stroke=&quot;%237c836b&quot; stroke-width=&quot;1.2&quot; stroke-linecap=&quot;round&quot;><path d=&quot;M5,10 Q25,14 50,10 T95,10&quot;/><path d=&quot;M38,10 Q44,4 50,10 Q44,16 38,10 Z&quot; fill=&quot;%237c836b&quot; fill-opacity=&quot;0.15&quot;/><path d=&quot;M50,10 Q56,4 62,10 Q56,16 52,10 Z&quot; fill=&quot;%237c836b&quot; fill-opacity=&quot;0.15&quot;/></svg>'); background-repeat: no-repeat; background-position: center; background-size: contain;"></div>
+                    <a href="https://meet.google.com/fyo-rcqw-shw"
+                    target="_blank"
+                    style="
+                            display:inline-flex;
+                            align-items:center;
+                            justify-content:center;
+                            gap:10px;
+                            padding:14px 34px;
+                            border-radius:50px;
+                            background:#7c836b;
+                            color:#fff;
+                            text-decoration:none;
+                            font-family:'Montserrat', sans-serif;
+                            font-size:.95rem;
+                            font-weight:600;
+                            letter-spacing:1px;
+                            text-transform:uppercase;
+                            box-shadow:0 10px 25px rgba(124,131,107,.25);
+                            transition:.3s ease;
+                    "
+                    onmouseover="this.style.background='#69715d';this.style.transform='translateY(-2px)'"
+                    onmouseout="this.style.background='#7c836b';this.style.transform='translateY(0)'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M16.5 4H6.75A3.75 3.75 0 0 0 3 7.75v8.5A3.75 3.75 0 0 0 6.75 20h9.75a3.75 3.75 0 0 0 3.75-3.75V7.75A3.75 3.75 0 0 0 16.5 4Zm-2.25 11.25h-6a1.5 1.5 0 0 1-1.5-1.5v-3.5a1.5 1.5 0 0 1 1.5-1.5h6a1.5 1.5 0 0 1 1.5 1.5v3.5a1.5 1.5 0 0 1-1.5 1.5Z"/>
+                        <path d="m21 8.25-3.75 2.5v2.5L21 15.75c.5.33 1.13-.03 1.13-.63V8.88c0-.6-.63-.96-1.13-.63Z"/>
+                    </svg>
+
+                    CONÉCTATE A LA TRASMISIÓN
+                    </a>
+                </div>
+                </div>
+            </div>
+
+        </section>
+        
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const overlay = document.getElementById("welcome-overlay");
+            const mainContent = document.getElementById("main-content");
+            const btnWithMusic = document.getElementById("btn-with-music");
+            const btnNoMusic = document.getElementById("btn-no-music");
+
+            const music = new Audio("assets/desde_que_te_tengo.mp3");
+            music.loop = true;
+            music.volume = 0.1;
+            music.preload = "auto";
+
+            // Función global
+            window.ingresarALaInvitacion = function () {
+
+                overlay.classList.add("fade-out");
+
+                mainContent.classList.remove("hidden");
+                mainContent.classList.add("fade-in");
+
+                setTimeout(() => {
+                    overlay.style.display = "none";
+                }, 500);
+
+                music.play().catch(error => {
+                    console.log("La reproducción automática fue bloqueada:", error);
+                });
+            };
+
+            const track = document.querySelector(".carousel-track");
+            const slides = document.querySelectorAll(".carousel-track img");
+            let index = 0;
+            function moveCarousel() {
+                index++;
+                if (index >= slides.length) {
+                    index = 0;
+                }
+                track.style.transform = `translateX(-${index * 100}%)`;            }
+
+            setInterval(moveCarousel, 3500); // Cambia cada 3.5 segundos
+
+            // Ingresar con música
+            btnWithMusic.addEventListener("click", () => {
+
+                music.play().catch(error => {
+                    console.log("La reproducción automática fue bloqueada:", error);
+                });
+
+                ingresarALaInvitacion();
+
+            });
+
+            // Ingresar sin música
+            btnNoMusic.addEventListener("click", () => {
+                ingresarALaInvitacion();
+            });
+
+        });
+        const weddingDate = new Date("2026-09-26T16:00:00-05:00");
+
+        function updateCountdown() {
+            const now = new Date();
+            const difference = weddingDate - now;
+            if (difference <= 0) {
+                return;
+            }
+            const days = Math.floor(
+                difference / (1000 * 60 * 60 * 24)
+            );
+            const hours = Math.floor(
+                (difference % (1000 * 60 * 60 * 24))
+                /
+                (1000 * 60 * 60)
+            );
+            const minutes = Math.floor(
+                (difference % (1000 * 60 * 60))
+                /
+                (1000 * 60)
+            );
+            const seconds = Math.floor(
+                (difference % (1000 * 60))
+                /
+                1000
+            );
+            document.getElementById("days").textContent =
+                days.toString().padStart(2, "0");
+
+            document.getElementById("hours").textContent =
+                hours.toString().padStart(2, "0");
+
+            document.getElementById("minutes").textContent =
+                minutes.toString().padStart(2, "0");
+
+            document.getElementById("seconds").textContent =
+                seconds.toString().padStart(2, "0");
+        }
+
+        updateCountdown();
+
+        setInterval(updateCountdown, 1000);
+    </script>
+
+</body>
+</html>
