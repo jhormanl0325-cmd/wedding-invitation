@@ -161,26 +161,40 @@
             const btnNoMusic = document.getElementById("btn-no-music");
 
             const music = new Audio("assets/desde_que_te_tengo.mp3");
-            music.loop = true;
-            music.volume = 0.1;
-            music.preload = "auto";
+                music.loop = true;
+                music.volume = 0.1;
+                music.preload = "auto";
 
-            // Función global
-            window.ingresarALaInvitacion = function () {
+                // Función global
+                window.ingresarALaInvitacion = function () {
 
-                overlay.classList.add("fade-out");
+                    overlay.classList.add("fade-out");
 
-                mainContent.classList.remove("hidden");
-                mainContent.classList.add("fade-in");
+                    mainContent.classList.remove("hidden");
+                    mainContent.classList.add("fade-in");
 
-                setTimeout(() => {
-                    overlay.style.display = "none";
-                }, 500);
+                    setTimeout(() => {
+                        overlay.style.display = "none";
+                    }, 500);
 
-                music.play().catch(error => {
-                    console.log("La reproducción automática fue bloqueada:", error);
-                });
-            };
+                    music.play().catch(error => {
+                        console.log("La reproducción automática fue bloqueada:", error);
+                    });
+                };
+
+
+                // Pausar música cuando el usuario sale de la página/pestaña
+                document.addEventListener("visibilitychange", function () {
+
+                    if (document.hidden) {
+                        music.pause();
+                    } else {
+                        music.play().catch(error => {
+                            console.log("No se pudo reanudar la música:", error);
+                        });
+                    }
+
+            });
 
             const track = document.querySelector(".carousel-track");
             const slides = document.querySelectorAll(".carousel-track img");
